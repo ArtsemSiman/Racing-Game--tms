@@ -23,7 +23,7 @@ extension UIViewController {
             let action = UIAlertAction(title: button,
                                        style: .default
             ) {
-                 action in handler?(action)
+                action in handler?(action)
                 if let textField = alert.textFields?.first {
                     textFieldHandler?(textField)
                 }
@@ -33,20 +33,20 @@ extension UIViewController {
         }
         
         
-            let cancelAction = UIAlertAction(title: "Закрыть",
-                                             style: .cancel) { _ in
-                print(alert.textFields?.first?.text)
-            }
-            
-            alert.addAction(cancelAction)
-            
+        let cancelAction = UIAlertAction(title: "Закрыть",
+                                         style: .cancel) { _ in
+            print(alert.textFields?.first?.text)
+        }
+        
+        alert.addAction(cancelAction)
+        
         if textFieldHandler != nil {
             alert.addTextField {
                 textField in textField.placeholder = "пароль"
             }
         }
-            
-            
-            self.present(alert, animated: true)
-        }
+        
+        
+        self.present(alert, animated: true)
+    }
 }
