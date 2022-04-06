@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setInitailUserDefaultsValues() {
-        settings.shared.userName = "Person"
-        settings.shared.speed = 10
+        Settings.shared.userName = "Person"
+        Settings.shared.speed = 10
         
     }
 

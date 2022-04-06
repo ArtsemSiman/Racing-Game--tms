@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420BB6B527FACDB2004CF27A /* Hindrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420BB6B427FACDB2004CF27A /* Hindrance.swift */; };
+		420BB6B727FADB02004CF27A /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420BB6B627FADB02004CF27A /* Color+Codable.swift */; };
 		422D3CB827F1791B0001EC0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CB727F1791B0001EC0F /* AppDelegate.swift */; };
 		422D3CBA27F1791B0001EC0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CB927F1791B0001EC0F /* SceneDelegate.swift */; };
 		422D3CBC27F1791B0001EC0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CBB27F1791B0001EC0F /* ViewController.swift */; };
@@ -15,11 +17,13 @@
 		422D3CC427F1791E0001EC0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422D3CC227F1791E0001EC0F /* LaunchScreen.storyboard */; };
 		422D3CD027F2E0F60001EC0F /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CCF27F2E0F60001EC0F /* UIViewController+Alert.swift */; };
 		422D3CD427F6D8BE0001EC0F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */; };
-		422D3CD627F721470001EC0F /* settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD527F721470001EC0F /* settings.swift */; };
+		422D3CD627F721470001EC0F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD527F721470001EC0F /* Settings.swift */; };
 		422D3CD827F722500001EC0F /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD727F722500001EC0F /* FileStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420BB6B427FACDB2004CF27A /* Hindrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hindrance.swift; sourceTree = "<group>"; };
+		420BB6B627FADB02004CF27A /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		422D3CB427F1791B0001EC0F /* Racing game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Racing game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		422D3CB727F1791B0001EC0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422D3CB927F1791B0001EC0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +34,7 @@
 		422D3CC527F1791E0001EC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422D3CCF27F2E0F60001EC0F /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		422D3CD527F721470001EC0F /* settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settings.swift; sourceTree = "<group>"; };
+		422D3CD527F721470001EC0F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		422D3CD727F722500001EC0F /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +73,9 @@
 				422D3CBB27F1791B0001EC0F /* ViewController.swift */,
 				422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */,
 				422D3CCF27F2E0F60001EC0F /* UIViewController+Alert.swift */,
-				422D3CD527F721470001EC0F /* settings.swift */,
+				420BB6B627FADB02004CF27A /* Color+Codable.swift */,
+				422D3CD527F721470001EC0F /* Settings.swift */,
+				420BB6B427FACDB2004CF27A /* Hindrance.swift */,
 				422D3CD727F722500001EC0F /* FileStorage.swift */,
 				422D3CBD27F1791B0001EC0F /* Main.storyboard */,
 				422D3CC027F1791E0001EC0F /* Assets.xcassets */,
@@ -152,10 +158,12 @@
 			files = (
 				422D3CBC27F1791B0001EC0F /* ViewController.swift in Sources */,
 				422D3CB827F1791B0001EC0F /* AppDelegate.swift in Sources */,
-				422D3CD627F721470001EC0F /* settings.swift in Sources */,
+				422D3CD627F721470001EC0F /* Settings.swift in Sources */,
 				422D3CBA27F1791B0001EC0F /* SceneDelegate.swift in Sources */,
 				422D3CD427F6D8BE0001EC0F /* SettingsViewController.swift in Sources */,
 				422D3CD827F722500001EC0F /* FileStorage.swift in Sources */,
+				420BB6B527FACDB2004CF27A /* Hindrance.swift in Sources */,
+				420BB6B727FADB02004CF27A /* Color+Codable.swift in Sources */,
 				422D3CD027F2E0F60001EC0F /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

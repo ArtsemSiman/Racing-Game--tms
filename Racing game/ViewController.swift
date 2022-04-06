@@ -9,6 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBAction func photoButton(_ sender: Any) {
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Library", style: .default) { [weak self] _ in
+            self?.openGallery()
+        })
+        alert.addAction(UIAlertAction(title: "Camera", style: .default) { [weak self] _ in
+            self?.openCamera()
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(alert, animated: true)
+    }
+    
     var openGameHandler: ((UIAlertAction) -> Void) =  {_ in
         //
     }
@@ -78,11 +94,7 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissBlur))
         blurView.addGestureRecognizer(tapGesture)
         blurView.isUserInteractionEnabled = false
-        
-        settings.shared.userName = "Артём"
        
-        settings.shared.speed = 20
-        
         FileStorage.saveImage(UIImage(named:"construction"), withName: "construction")
         FileStorage.saveImage(UIImage(named:"conus"), withName: "conus")
         FileStorage.saveImage(UIImage(named:"conus"), withName: "conus")
@@ -91,3 +103,47 @@ class ViewController: UIViewController {
     
 }
 
+
+// MARK: - Extension Open Camera & Gallary
+
+private extension ViewController {
+    func openGallery() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func openCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+
+// MARK: - Extension ImagePicker Delegate
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      if let pickedImage = info[.originalImage] as? UIImage {
+          imageView.image = pickedImage
+      }
+      picker.dismiss(animated: true, completion: nil)
+  }
+}

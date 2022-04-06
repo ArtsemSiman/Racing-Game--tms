@@ -58,14 +58,14 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-Yk-wWg">
                                         <rect key="frame" x="30" y="30" width="240" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="EC9-Ua-hZY"/>
                                             <constraint firstAttribute="width" constant="240" id="GdH-ES-1OW"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лучший результат:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyc-yQ-OEY">
-                                        <rect key="frame" x="20" y="262" width="260" height="19.5"/>
+                                        <rect key="frame" x="20" y="322" width="260" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="fbl-51-3id"/>
                                         </constraints>
@@ -89,7 +89,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtr-x5-e4v">
-                                        <rect key="frame" x="20" y="178" width="260" height="20.5"/>
+                                        <rect key="frame" x="20" y="238" width="260" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="R03-cP-tER"/>
                                         </constraints>
@@ -97,14 +97,29 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xM-as-RZv">
+                                        <rect key="frame" x="164" y="178" width="116" height="28.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Добавить фото" subtitle="">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="PhotoButton:" destination="Oy1-IX-j5s" eventType="touchUpInside" id="0sh-Op-hXA"/>
+                                            <action selector="bb:" destination="Oy1-IX-j5s" eventType="touchUpInside" id="lKw-zf-d13"/>
+                                            <action selector="photoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVU-s3-1Ab"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.95818876067185332" blue="0.46267693787900588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Fyc-yQ-OEY" secondAttribute="trailing" constant="20" id="5Z6-Bn-ASn"/>
                                     <constraint firstAttribute="trailing" secondItem="kPa-cx-eyl" secondAttribute="trailing" constant="20" id="8og-9u-AOX"/>
                                     <constraint firstAttribute="width" constant="300" id="Rn0-sJ-yqY"/>
-                                    <constraint firstItem="Vtr-x5-e4v" firstAttribute="top" secondItem="Dv9-Yk-wWg" secondAttribute="bottom" constant="20" id="WL1-y8-EZi"/>
+                                    <constraint firstItem="Vtr-x5-e4v" firstAttribute="top" secondItem="Dv9-Yk-wWg" secondAttribute="bottom" constant="80" id="WL1-y8-EZi"/>
+                                    <constraint firstItem="6xM-as-RZv" firstAttribute="top" secondItem="Dv9-Yk-wWg" secondAttribute="bottom" constant="20" id="XVt-mO-3wW"/>
                                     <constraint firstItem="Dv9-Yk-wWg" firstAttribute="top" secondItem="fOe-5h-EdZ" secondAttribute="top" constant="30" id="ajV-WP-vUD"/>
+                                    <constraint firstAttribute="trailing" secondItem="6xM-as-RZv" secondAttribute="trailing" constant="20" id="eG2-2x-znF"/>
                                     <constraint firstAttribute="trailing" secondItem="Dv9-Yk-wWg" secondAttribute="trailing" constant="30" id="mNV-96-au0"/>
                                     <constraint firstItem="Fyc-yQ-OEY" firstAttribute="top" secondItem="Vtr-x5-e4v" secondAttribute="bottom" constant="63.5" id="mmw-5G-M0p"/>
                                     <constraint firstAttribute="trailing" secondItem="Vtr-x5-e4v" secondAttribute="trailing" constant="20" id="orm-IO-4gO"/>
@@ -139,11 +154,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blurView" destination="FvK-b3-axY" id="lun-C0-Gh5"/>
+                        <outlet property="imageView" destination="Dv9-Yk-wWg" id="7ly-bJ-qjN"/>
                         <outlet property="menuContainer" destination="fOe-5h-EdZ" id="xoa-q5-LiQ"/>
                         <outlet property="menuWidth" destination="Rn0-sJ-yqY" id="GYc-SK-HIN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Oy1-IX-j5s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="79.710144927536234" y="59.598214285714285"/>
         </scene>
@@ -165,6 +182,9 @@
                                             <segment title="Black"/>
                                             <segment title="Blue"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeColor:" destination="4uo-4U-L2t" eventType="valueChanged" id="Xn0-X4-rfX"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет авто" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFY-h6-LWD">
                                         <rect key="frame" x="20" y="0.0" width="334" height="21"/>
@@ -197,6 +217,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-Mj-uT4">
                                         <rect key="frame" x="18" y="41" width="338" height="31"/>
+                                        <connections>
+                                            <action selector="changeSpeed:" destination="4uo-4U-L2t" eventType="valueChanged" id="kbv-TK-lrg"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.69706108320000004" blue="0.0001922522367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,6 +250,9 @@
                                             <segment title="Conus"/>
                                             <segment title="Sign"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeHindrance:" destination="4uo-4U-L2t" eventType="valueChanged" id="JTC-Kl-WBK"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.69706108320000004" blue="0.0001922522367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -261,13 +287,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="ubS-Yq-TXy">
-                        <barButtonItem key="rightBarButtonItem" title="Close" id="Ed1-Gb-5uv">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Ed1-Gb-5uv">
                             <connections>
-                                <action selector="close:" destination="4uo-4U-L2t" id="P9P-YL-G4S"/>
+                                <action selector="save:" destination="4uo-4U-L2t" id="lof-BS-OYi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="colorControl" destination="iz1-cR-6iA" id="9fl-bm-VGo"/>
+                        <outlet property="hindranceControl" destination="hYb-Cp-teW" id="2Bp-cB-g5D"/>
+                        <outlet property="speedSlider" destination="sYW-Mj-uT4" id="jC4-R6-xr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9m-8J-l9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,9 +308,6 @@
     <resources>
         <image name="285811_sportcar_auto_vehicle_car_automobile_icon" width="200" height="200"/>
         <image name="circle.grid.3x3.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
