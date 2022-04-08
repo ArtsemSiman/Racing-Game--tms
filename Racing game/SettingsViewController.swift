@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var hindranceControl: UISegmentedControl!
     
+    @IBOutlet weak var name: UITextField!
+    
     private let colors = [UIColor.red, UIColor.black, UIColor.blue]
     private let hindrance = [Hindrance.tree, Hindrance.construction, Hindrance.conus, Hindrance.sign]
     
@@ -23,16 +25,18 @@ class SettingsViewController: UIViewController {
         Settings.shared.carColor = colors[colorControl.selectedSegmentIndex]
         Settings.shared.speed = speedSlider.value
         Settings.shared.hindrance = hindrance[hindranceControl.selectedSegmentIndex]
+        Settings.shared.userName = name.text ?? ""
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorControl.selectedSegmentIndex = colors.firstIndex(of: Settings.shared.carColor) ?? 0
-        
         speedSlider.value = Settings.shared.speed
         hindranceControl.selectedSegmentIndex = hindrance.firstIndex(of: Settings.shared.hindrance) ?? 0
-
-
+        name.text = Settings.shared.userName
+        name.delegate = self
+        name.placeholder = "Enter name"
+        
     }
   
     @IBAction func changeColor(_ sender: UISegmentedControl) {
@@ -47,4 +51,13 @@ class SettingsViewController: UIViewController {
        
     }
     
+    @IBAction func changeName(_ sender: UITextField) {
+    }
+    
+}
+
+extension SettingsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.endEditing(false)
+    }
 }

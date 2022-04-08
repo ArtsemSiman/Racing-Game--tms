@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "2315978_cab_taxi_transportation_vehicle_icon.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}

@@ -33,7 +33,7 @@ extension CodableColor: Decodable {
         let decodedData = try container.decode(Data.self)
         let nsCoder = try NSKeyedUnarchiver(forReadingFrom: decodedData)
         self.color = try UIColor(coder: nsCoder).unsafelyUnwrapped
-        // `unwrappedOrThrow()` is from OptionalTools: https://github.com/RougeWare/Swift-Optional-Tools
+      
     }
 }
 

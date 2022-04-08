@@ -33,7 +33,8 @@ class ViewController: UIViewController {
         let password = textField.text ?? ""
         
         if password == "11111" {
-            // go next screen
+//            let vc = GameViewController()
+//            self?.present(vc, animated: true)
         } else {
             self?.showAlert()
         }
@@ -94,11 +95,9 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissBlur))
         blurView.addGestureRecognizer(tapGesture)
         blurView.isUserInteractionEnabled = false
-       
-        FileStorage.saveImage(UIImage(named:"construction"), withName: "construction")
-        FileStorage.saveImage(UIImage(named:"conus"), withName: "conus")
-        FileStorage.saveImage(UIImage(named:"conus"), withName: "conus")
-        FileStorage.saveImage(UIImage(named:"tree"), withName: "tree")
+        imageView.layer.cornerRadius = imageView.frame.height / 2
+        
+        imageView.image = FileStorage.getImage(withName: "userAvatar")
     }
     
 }
@@ -143,6 +142,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       if let pickedImage = info[.originalImage] as? UIImage {
           imageView.image = pickedImage
+          FileStorage.saveImage(pickedImage, withName: "userAvatar")
       }
       picker.dismiss(animated: true, completion: nil)
   }

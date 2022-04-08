@@ -19,6 +19,7 @@
 		422D3CD427F6D8BE0001EC0F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */; };
 		422D3CD627F721470001EC0F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD527F721470001EC0F /* Settings.swift */; };
 		422D3CD827F722500001EC0F /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD727F722500001EC0F /* FileStorage.swift */; };
+		4296D99F27FEC4D600729C91 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296D99E27FEC4D600729C91 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		422D3CD527F721470001EC0F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		422D3CD727F722500001EC0F /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		4296D99E27FEC4D600729C91 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				422D3CBB27F1791B0001EC0F /* ViewController.swift */,
 				422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */,
 				422D3CCF27F2E0F60001EC0F /* UIViewController+Alert.swift */,
+				4296D99E27FEC4D600729C91 /* GameViewController.swift */,
 				420BB6B627FADB02004CF27A /* Color+Codable.swift */,
 				422D3CD527F721470001EC0F /* Settings.swift */,
 				420BB6B427FACDB2004CF27A /* Hindrance.swift */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4296D99F27FEC4D600729C91 /* GameViewController.swift in Sources */,
 				422D3CBC27F1791B0001EC0F /* ViewController.swift in Sources */,
 				422D3CB827F1791B0001EC0F /* AppDelegate.swift in Sources */,
 				422D3CD627F721470001EC0F /* Settings.swift in Sources */,
