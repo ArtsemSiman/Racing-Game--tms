@@ -41,8 +41,13 @@ extension UIViewController {
         alert.addAction(cancelAction)
         
         if textFieldHandler != nil {
-            alert.addTextField {
-                textField in textField.placeholder = "пароль"
+            alert.addTextField { textField in
+                textField.placeholder = "пароль"
+                textField.isSecureTextEntry = true
+                
+                let eyeButton = UIButton(frame: CGRect(x: 232, y: 2, width: 15, height: 15))
+                eyeButton.setImage(UIImage(systemName: "eye"), for: .normal)
+                textField.addSubview(eyeButton)
             }
         }
         

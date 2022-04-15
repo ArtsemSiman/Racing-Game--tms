@@ -33,8 +33,7 @@ class ViewController: UIViewController {
         let password = textField.text ?? ""
         
         if password == "11111" {
-//            let vc = GameViewController()
-//            self?.present(vc, animated: true)
+            self?.performSegue(withIdentifier: "startGame", sender: self)
         } else {
             self?.showAlert()
         }
