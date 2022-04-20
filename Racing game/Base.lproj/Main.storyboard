@@ -344,7 +344,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="colorControl" destination="iz1-cR-6iA" id="9fl-bm-VGo"/>
+                        <outlet property="colorControl" destination="iz1-cR-6iA" id="vUQ-4x-E4H"/>
                         <outlet property="hindranceControl" destination="hYb-Cp-teW" id="2Bp-cB-g5D"/>
                         <outlet property="name" destination="THn-Rh-X5a" id="dwT-i3-XBa"/>
                         <outlet property="speedSlider" destination="sYW-Mj-uT4" id="jC4-R6-xr5"/>
@@ -392,36 +392,67 @@
                                     <action selector="right:" destination="QQP-RX-ejx" eventType="touchUpInside" id="ewn-dm-iYF"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-FK-qab">
-                                <rect key="frame" x="344" y="88" width="50" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car2" translatesAutoresizingMaskIntoConstraints="NO" id="79E-6u-QYj">
+                                <rect key="frame" x="87" y="634" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="5d4-rH-KTm"/>
-                                    <constraint firstAttribute="width" secondItem="Ahc-FK-qab" secondAttribute="height" multiplier="1:1" identifier="1" id="5jU-mA-hcq"/>
-                                    <constraint firstAttribute="height" constant="50" id="lkN-fy-WgZ"/>
+                                    <constraint firstAttribute="width" constant="240" id="8rW-hv-aKC"/>
+                                    <constraint firstAttribute="width" secondItem="79E-6u-QYj" secondAttribute="height" multiplier="15:8" id="Alh-cO-qNg"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car2" translatesAutoresizingMaskIntoConstraints="NO" id="79E-6u-QYj">
-                                <rect key="frame" x="87" y="421" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction" translatesAutoresizingMaskIntoConstraints="NO" id="dVA-cd-Wd8">
+                                <rect key="frame" x="329" y="80" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dVA-cd-Wd8" secondAttribute="height" id="5mE-dW-0GW"/>
+                                    <constraint firstAttribute="width" constant="50" id="H82-Pm-6Eg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction" translatesAutoresizingMaskIntoConstraints="NO" id="pXv-OB-VKO">
+                                <rect key="frame" x="140" y="80" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pXv-OB-VKO" secondAttribute="height" id="DM8-8h-ajj"/>
+                                    <constraint firstAttribute="width" constant="50" id="UlC-9j-GhS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction" translatesAutoresizingMaskIntoConstraints="NO" id="88I-JQ-BQ8">
+                                <rect key="frame" x="35" y="80" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8dc-be-lpP"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8sh-ZN-8eR"/>
                         <color key="backgroundColor" red="1" green="0.84254951720000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kJ5-gG-EBF" firstAttribute="leading" secondItem="8sh-ZN-8eR" secondAttribute="leading" constant="30" id="545-8w-WY5"/>
-                            <constraint firstItem="Ahc-FK-qab" firstAttribute="trailing" secondItem="Yee-bO-QxF" secondAttribute="trailingMargin" id="O7T-mt-RKW"/>
+                            <constraint firstItem="dVA-cd-Wd8" firstAttribute="top" secondItem="Yee-bO-QxF" secondAttribute="top" constant="80" id="DBV-np-Ntt"/>
+                            <constraint firstItem="8sh-ZN-8eR" firstAttribute="bottom" secondItem="79E-6u-QYj" secondAttribute="bottom" constant="100" id="ELJ-gc-JEZ"/>
+                            <constraint firstItem="79E-6u-QYj" firstAttribute="leading" secondItem="8sh-ZN-8eR" secondAttribute="leading" constant="87" id="RJ3-3U-2wL"/>
+                            <constraint firstItem="8sh-ZN-8eR" firstAttribute="trailing" secondItem="dVA-cd-Wd8" secondAttribute="trailing" constant="35" id="S8T-rF-IAL"/>
                             <constraint firstItem="8sh-ZN-8eR" firstAttribute="bottom" secondItem="kJ5-gG-EBF" secondAttribute="bottom" constant="50" id="a0j-0P-qe6"/>
+                            <constraint firstItem="pXv-OB-VKO" firstAttribute="leading" secondItem="8sh-ZN-8eR" secondAttribute="leading" constant="140" id="cdT-BO-uIr"/>
+                            <constraint firstItem="88I-JQ-BQ8" firstAttribute="width" secondItem="88I-JQ-BQ8" secondAttribute="height" id="cdf-Rn-FU3"/>
                             <constraint firstItem="8sh-ZN-8eR" firstAttribute="trailing" secondItem="E1F-KZ-u3V" secondAttribute="trailing" constant="30" id="jBj-Ux-9Qd"/>
-                            <constraint firstItem="Ahc-FK-qab" firstAttribute="top" secondItem="8sh-ZN-8eR" secondAttribute="top" id="wEZ-af-6jb"/>
+                            <constraint firstItem="pXv-OB-VKO" firstAttribute="top" secondItem="Yee-bO-QxF" secondAttribute="top" constant="80" id="qNA-MP-Pse"/>
                             <constraint firstItem="E1F-KZ-u3V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kJ5-gG-EBF" secondAttribute="trailing" constant="8" symbolic="YES" id="wQ8-r5-Q63"/>
+                            <constraint firstItem="88I-JQ-BQ8" firstAttribute="leading" secondItem="8sh-ZN-8eR" secondAttribute="leading" constant="35" id="xVc-vu-7aW"/>
+                            <constraint firstItem="88I-JQ-BQ8" firstAttribute="top" secondItem="Yee-bO-QxF" secondAttribute="top" constant="80" id="xnV-GT-evO"/>
                             <constraint firstItem="8sh-ZN-8eR" firstAttribute="bottom" secondItem="E1F-KZ-u3V" secondAttribute="bottom" constant="50" id="zMZ-g5-FWG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KmD-Jf-I5j"/>
                     <connections>
-                        <outlet property="block" destination="Ahc-FK-qab" id="0An-0v-q4m"/>
-                        <outlet property="blockDown" destination="O7T-mt-RKW" id="jfD-hd-44h"/>
+                        <outlet property="carLeadingConstraint" destination="RJ3-3U-2wL" id="QVE-7Y-E2Y"/>
                         <outlet property="carView" destination="79E-6u-QYj" id="TiO-eG-1jm"/>
+                        <outlet property="carWidtConstraint" destination="8rW-hv-aKC" id="NhR-Xb-oIo"/>
+                        <outlet property="centerFall" destination="pXv-OB-VKO" id="HEU-Fd-ndu"/>
+                        <outlet property="centerTopConstraint" destination="qNA-MP-Pse" id="cOP-uJ-fcV"/>
+                        <outlet property="leftButton" destination="kJ5-gG-EBF" id="qMq-Zf-U9e"/>
+                        <outlet property="leftFall" destination="88I-JQ-BQ8" id="Tuu-UV-a4c"/>
+                        <outlet property="leftTopConstraint" destination="xnV-GT-evO" id="p7t-AU-ymg"/>
+                        <outlet property="mainView" destination="Yee-bO-QxF" id="XSK-g2-fpZ"/>
+                        <outlet property="rightButton" destination="E1F-KZ-u3V" id="0ix-CL-3ae"/>
+                        <outlet property="rightFall" destination="dVA-cd-Wd8" id="MfI-o1-AEg"/>
+                        <outlet property="rightTopConstraint" destination="DBV-np-Ntt" id="kfj-HR-vXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DF-qP-HUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

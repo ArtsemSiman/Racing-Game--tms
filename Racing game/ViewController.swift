@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     lazy var pinHandler: ((UITextField) -> Void) =  { [weak self] textField in
         let password = textField.text ?? ""
         
-        if password == "11111" {
+        if password == "111" {
             self?.performSegue(withIdentifier: "startGame", sender: self)
         } else {
             self?.showAlert()

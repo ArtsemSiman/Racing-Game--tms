@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
+
 class Settings {
+    
     public static var shared = Settings()
     
     private init() {}

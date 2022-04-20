@@ -9,6 +9,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+   
     @IBOutlet weak var colorControl: UISegmentedControl!
     
     @IBOutlet weak var speedSlider: UISlider!
