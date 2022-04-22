@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordCell" rowHeight="70" id="KGk-i7-Jjw" customClass="RecordTableViewCell" customModule="Racing_game" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVf-5O-9v2">
+                        <rect key="frame" x="20" y="19" width="69" height="32.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-5X-NFX">
+                        <rect key="frame" x="167.5" y="58" width="20.5" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQZ-Xx-WDh">
+                        <rect key="frame" x="245" y="19" width="90" height="32.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.037429042760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="0.90928289738347146" blue="0.16062495566035473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="N8p-5X-NFX" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="0zK-Xt-qfU"/>
+                    <constraint firstAttribute="trailing" secondItem="vQZ-Xx-WDh" secondAttribute="trailing" constant="20" id="XcZ-r6-jI1"/>
+                    <constraint firstItem="LVf-5O-9v2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XsB-Hc-sfL"/>
+                    <constraint firstItem="LVf-5O-9v2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="czA-s9-gFa"/>
+                    <constraint firstItem="vQZ-Xx-WDh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lDi-Cy-N8O"/>
+                    <constraint firstAttribute="bottom" secondItem="N8p-5X-NFX" secondAttribute="bottom" constant="1" id="xwc-C3-xnD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="date" destination="N8p-5X-NFX" id="CPl-Uz-ABu"/>
+                <outlet property="name" destination="LVf-5O-9v2" id="d9P-L4-89W"/>
+                <outlet property="score" destination="vQZ-Xx-WDh" id="e11-kG-ox4"/>
+            </connections>
+            <point key="canvasLocation" x="157.24637681159422" y="68.303571428571431"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -20,6 +20,10 @@
 		422D3CD427F6D8BE0001EC0F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */; };
 		422D3CD627F721470001EC0F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD527F721470001EC0F /* Settings.swift */; };
 		422D3CD827F722500001EC0F /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D3CD727F722500001EC0F /* FileStorage.swift */; };
+		423C4F92281199AF00C237D6 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C4F91281199AF00C237D6 /* GameOverView.swift */; };
+		423C4F962811AC5600C237D6 /* RecordTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C4F952811AC5600C237D6 /* RecordTableView.swift */; };
+		423C4F9C2812E1FB00C237D6 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423C4F9A2812E1FB00C237D6 /* RecordTableViewCell.xib */; };
+		423C4F9E2812E63300C237D6 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C4F9D2812E63300C237D6 /* RecordTableViewCell.swift */; };
 		4296D99F27FEC4D600729C91 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296D99E27FEC4D600729C91 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +43,10 @@
 		422D3CD327F6D8BD0001EC0F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		422D3CD527F721470001EC0F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		422D3CD727F722500001EC0F /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		423C4F91281199AF00C237D6 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		423C4F952811AC5600C237D6 /* RecordTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableView.swift; sourceTree = "<group>"; };
+		423C4F9A2812E1FB00C237D6 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		423C4F9D2812E63300C237D6 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		4296D99E27FEC4D600729C91 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +89,11 @@
 				420BB6B627FADB02004CF27A /* Color+Codable.swift */,
 				422D3CD527F721470001EC0F /* Settings.swift */,
 				420BB6B427FACDB2004CF27A /* Hindrance.swift */,
+				423C4F91281199AF00C237D6 /* GameOverView.swift */,
 				4216CB9328100D1700B79E49 /* RecocrdTable.swift */,
+				423C4F952811AC5600C237D6 /* RecordTableView.swift */,
+				423C4F9D2812E63300C237D6 /* RecordTableViewCell.swift */,
+				423C4F9A2812E1FB00C237D6 /* RecordTableViewCell.xib */,
 				422D3CD727F722500001EC0F /* FileStorage.swift */,
 				422D3CBD27F1791B0001EC0F /* Main.storyboard */,
 				422D3CC027F1791E0001EC0F /* Assets.xcassets */,
@@ -151,6 +163,7 @@
 			files = (
 				422D3CC427F1791E0001EC0F /* LaunchScreen.storyboard in Resources */,
 				422D3CC127F1791E0001EC0F /* Assets.xcassets in Resources */,
+				423C4F9C2812E1FB00C237D6 /* RecordTableViewCell.xib in Resources */,
 				422D3CBF27F1791B0001EC0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +177,7 @@
 			files = (
 				4296D99F27FEC4D600729C91 /* GameViewController.swift in Sources */,
 				422D3CBC27F1791B0001EC0F /* ViewController.swift in Sources */,
+				423C4F9E2812E63300C237D6 /* RecordTableViewCell.swift in Sources */,
 				422D3CB827F1791B0001EC0F /* AppDelegate.swift in Sources */,
 				422D3CD627F721470001EC0F /* Settings.swift in Sources */,
 				422D3CBA27F1791B0001EC0F /* SceneDelegate.swift in Sources */,
@@ -172,7 +186,9 @@
 				422D3CD827F722500001EC0F /* FileStorage.swift in Sources */,
 				420BB6B527FACDB2004CF27A /* Hindrance.swift in Sources */,
 				420BB6B727FADB02004CF27A /* Color+Codable.swift in Sources */,
+				423C4F92281199AF00C237D6 /* GameOverView.swift in Sources */,
 				422D3CD027F2E0F60001EC0F /* UIViewController+Alert.swift in Sources */,
+				423C4F962811AC5600C237D6 /* RecordTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

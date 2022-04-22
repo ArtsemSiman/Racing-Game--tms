@@ -8,16 +8,7 @@
 import Foundation
 
 struct RecordTable {
-    let name: String
-    let score: Int
-    let date: Date
-    
-//    func getDate() -> String {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd.MM.yyyy"
-//        dateFormatter.timeZone = TimeZone.current
-//       // let dateString = dateFormatter.string(from: sender.date)
-//        return
-//        label.text = "\(dateString)"
-//    }
+    let userName: String
+    let userScore: Int
+    let userDate: Date
 }

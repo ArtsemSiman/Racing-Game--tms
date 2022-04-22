@@ -33,6 +33,9 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var rightFall: UIImageView!
     
+    private var userScore = 0
+    
+    
     var point: CGFloat = 0
     var minx: CGFloat = 0
     var maxx: CGFloat = 0
@@ -49,8 +52,22 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         chooseCarColor(carColor: Settings.shared.carColor)
         chooseHidrance(hidrance: Settings.shared.hindrance)
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+            guard let self = self else { return }
+            if self.carView.frame.intersects(self.leftFall.frame) {
+                timer.invalidate()
+                self.gameOverScreen()
+            } else if self.carView.frame.intersects(self.centerFall.frame) {
+                timer.invalidate()
+                self.gameOverScreen()
+            } else if self.carView.frame.intersects(self.rightFall.frame) {
+                timer.invalidate()
+                self.gameOverScreen()
+            }
+        }
     }
-    
+                  
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -60,6 +77,10 @@ class GameViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupSubviews()
+    }
+    
+    private func checkUserScore() {
+        userScore += 1
     }
     
     private func setupSubviews() {
@@ -112,8 +133,11 @@ class GameViewController: UIViewController {
     func moveDownHidrance() {
         guard self.mainView.bounds.contains(self.leftFall.frame) || self.leftTopConstraint.constant < 0 else {
             self.leftTopConstraint.constant = 50
+            self.checkUserScore()
             self.centerTopConstraint.constant = 50
+            self.checkUserScore()
             self.rightTopConstraint.constant = 50
+            self.checkUserScore()
             self.view.layoutIfNeeded()
             return self.repeatAnimation()
         }
@@ -136,26 +160,36 @@ class GameViewController: UIViewController {
     func chooseCarColor(carColor: UIColor) {
         switch carColor {
         case .red:
-            return carView.backgroundColor = UIColor.red
+           carView.backgroundColor = UIColor.red
         case .blue:
-            return carView.backgroundColor = UIColor.blue
+            carView.backgroundColor = UIColor.blue
         case .black:
-            return carView.backgroundColor = UIColor.lightGray
+            carView.backgroundColor = UIColor.lightGray
         default:
-            return carView.backgroundColor = UIColor.yellow
+            carView.backgroundColor = UIColor.yellow
         }
 }
-    func chooseHidrance(hidrance: Hindrance) -> UIImage? {
+    func chooseHidrance(hidrance: Hindrance) {
        switch hidrance {
        case .tree:
-           return UIImage(named: "tree")
+           return changeHidrance(to: UIImage(named: "tree"))
        case .construction:
-           return UIImage(named: "construction")
+           return changeHidrance(to: UIImage(named: "construction"))
        case .conus:
-           return UIImage(named: "conus")
+           return changeHidrance(to: UIImage(named: "conus"))
        case .sign:
-           return UIImage(named: "conus")
+           return changeHidrance(to:UIImage(named: "sign"))
        }
     }
     
+    private func changeHidrance(to image: UIImage?) {
+        leftFall.image = image
+        centerFall.image = image
+        rightFall.image = image
+    }
+    
+    func gameOverScreen() {
+        let endScreen = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GO") as! GameOverView
+        self.navigationController?.pushViewController(endScreen, animated: true)
+    }
 }
