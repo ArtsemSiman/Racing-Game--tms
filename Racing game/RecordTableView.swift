@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 
 class RecordTableView: UIViewController {
@@ -53,6 +54,19 @@ extension RecordTableView: UITableViewDataSource, UITableViewDelegate {
         cell.score.text = "\(user.userScore)"
         
         return cell
+        
+        let userInfo = [
+          NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+          NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+          NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+          "ProductID": "NO ID",
+          "View": "MainView"
+        ]
+
+        let error = NSError.init(domain: NSCocoaErrorDomain,
+                                 code: -1004,
+                                 userInfo: userInfo)
+        Crashlytics.crashlytics().record(error: error)
     }
 }
 

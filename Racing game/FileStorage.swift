@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
+
 
 class FileStorage {
     static func saveImage (_ image: UIImage?, withName filename: String) {
@@ -19,6 +22,19 @@ class FileStorage {
         guard let data = image.pngData() else { return }
         
         try? data.write(to: fileURL)
+        
+        let userInfo = [
+          NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+          NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+          NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+          "ProductID": "NO ID",
+          "View": "MainView"
+        ]
+
+        let error = NSError.init(domain: NSCocoaErrorDomain,
+                                 code: -1006,
+                                 userInfo: userInfo)
+        Crashlytics.crashlytics().record(error: error)
     }
     
     static func getImage(withName filename: String) ->UIImage? {
@@ -30,5 +46,17 @@ class FileStorage {
         guard let savedData = try? Data(contentsOf: fileURL) else { return nil }
          return UIImage(data: savedData) ?? UIImage()
         
+        let userInfo = [
+          NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+          NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+          NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+          "ProductID": "NO ID",
+          "View": "MainView"
+        ]
+
+        let error = NSError.init(domain: NSCocoaErrorDomain,
+                                 code: -1007,
+                                 userInfo: userInfo)
+        Crashlytics.crashlytics().record(error: error)
     }
 }

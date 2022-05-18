@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 
 class Settings {
@@ -45,7 +47,18 @@ class Settings {
             let decoder = JSONDecoder()
             let decodedColor = try? decoder.decode(CodableColor.self, from: data).color
             return decodedColor ?? UIColor()
-            
+            let userInfo = [
+              NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+              NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+              NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+              "ProductID": "NO ID",
+              "View": "MainView"
+            ]
+
+            let error = NSError.init(domain: NSCocoaErrorDomain,
+                                     code: -1008,
+                                     userInfo: userInfo)
+            Crashlytics.crashlytics().record(error: error)
         }
         set (newCarColor) {
 

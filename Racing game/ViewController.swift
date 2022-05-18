@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     
@@ -13,8 +15,7 @@ class ViewController: UIViewController {
     @IBAction func photoButton(_ sender: Any) {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Library", style: .default) { [weak self] _ in
-            self?.openGallery()
+        alert.addAction(UIAlertAction(title: "Library", style: .default) { [weak self] _ in self?.openGallery()
         })
         alert.addAction(UIAlertAction(title: "Camera", style: .default) { [weak self] _ in
             self?.openCamera()
@@ -53,7 +54,31 @@ class ViewController: UIViewController {
                              button: "Ок",
                              handler: self?.openGameHandler,
                              textFieldHandler: self?.pinHandler)
+            
+            let userInfo = [
+              NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+              NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+              NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+              "ProductID": "NO ID",
+              "View": "MainView"
+            ]
+
+            let error = NSError.init(domain: NSCocoaErrorDomain,
+                                     code: -1001,
+                                     userInfo: userInfo)
+            Crashlytics.crashlytics().record(error: error)
+            
+            Analytics.logEvent("startgame", parameters: nil)
+            
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+              AnalyticsParameterItemID: "id-\(111)",
+              AnalyticsParameterItemName: "start button",
+              AnalyticsParameterContentType: "button",
+            ])
+            
         }
+       
+
     }
     
     @objc
@@ -135,7 +160,7 @@ private extension ViewController {
 }
 
 // MARK: - Extension ImagePicker Delegate
-
+ 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

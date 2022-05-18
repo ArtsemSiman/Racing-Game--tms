@@ -24,10 +24,13 @@
 		423C4F962811AC5600C237D6 /* RecordTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C4F952811AC5600C237D6 /* RecordTableView.swift */; };
 		423C4F9C2812E1FB00C237D6 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423C4F9A2812E1FB00C237D6 /* RecordTableViewCell.xib */; };
 		423C4F9E2812E63300C237D6 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C4F9D2812E63300C237D6 /* RecordTableViewCell.swift */; };
+		426E2DFD282FC1340053F41B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 426E2DFC282FC1340053F41B /* GoogleService-Info.plist */; };
 		4296D99F27FEC4D600729C91 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296D99E27FEC4D600729C91 /* GameViewController.swift */; };
+		FF6FCA3600F595C0A28F55C5 /* Pods_Racing_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A5972BC8FCE148B024550C /* Pods_Racing_game.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0401F0043E47A2A0338C304A /* Pods-Racing game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racing game.release.xcconfig"; path = "Target Support Files/Pods-Racing game/Pods-Racing game.release.xcconfig"; sourceTree = "<group>"; };
 		420BB6B427FACDB2004CF27A /* Hindrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hindrance.swift; sourceTree = "<group>"; };
 		420BB6B627FADB02004CF27A /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		4216CB9328100D1700B79E49 /* RecocrdTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecocrdTable.swift; sourceTree = "<group>"; };
@@ -47,7 +50,10 @@
 		423C4F952811AC5600C237D6 /* RecordTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableView.swift; sourceTree = "<group>"; };
 		423C4F9A2812E1FB00C237D6 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
 		423C4F9D2812E63300C237D6 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		426E2DFC282FC1340053F41B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4296D99E27FEC4D600729C91 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D7A5972BC8FCE148B024550C /* Pods_Racing_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Racing_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4DF08F5FA49AE42A1B82C9 /* Pods-Racing game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racing game.debug.xcconfig"; path = "Target Support Files/Pods-Racing game/Pods-Racing game.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6FCA3600F595C0A28F55C5 /* Pods_Racing_game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +73,8 @@
 			children = (
 				422D3CB627F1791B0001EC0F /* Racing game */,
 				422D3CB527F1791B0001EC0F /* Products */,
+				623583B00345C23869218782 /* Pods */,
+				B7A57A35847E5D8F39E145E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,9 +107,27 @@
 				422D3CBD27F1791B0001EC0F /* Main.storyboard */,
 				422D3CC027F1791E0001EC0F /* Assets.xcassets */,
 				422D3CC227F1791E0001EC0F /* LaunchScreen.storyboard */,
+				426E2DFC282FC1340053F41B /* GoogleService-Info.plist */,
 				422D3CC527F1791E0001EC0F /* Info.plist */,
 			);
 			path = "Racing game";
+			sourceTree = "<group>";
+		};
+		623583B00345C23869218782 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA4DF08F5FA49AE42A1B82C9 /* Pods-Racing game.debug.xcconfig */,
+				0401F0043E47A2A0338C304A /* Pods-Racing game.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B7A57A35847E5D8F39E145E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7A5972BC8FCE148B024550C /* Pods_Racing_game.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 422D3CC827F1791E0001EC0F /* Build configuration list for PBXNativeTarget "Racing game" */;
 			buildPhases = (
+				CF49C25CBA55AF9CAC02B056 /* [CP] Check Pods Manifest.lock */,
 				422D3CB027F1791B0001EC0F /* Sources */,
 				422D3CB127F1791B0001EC0F /* Frameworks */,
 				422D3CB227F1791B0001EC0F /* Resources */,
+				28E2677A9F04660DE37D241F /* [CP] Embed Pods Frameworks */,
+				426E2DFF28327EC80053F41B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -147,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 422D3CAB27F1791B0001EC0F;
+			packageReferences = (
+				426E2DFE282FC21E0053F41B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 422D3CB527F1791B0001EC0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,12 +196,75 @@
 			files = (
 				422D3CC427F1791E0001EC0F /* LaunchScreen.storyboard in Resources */,
 				422D3CC127F1791E0001EC0F /* Assets.xcassets in Resources */,
+				426E2DFD282FC1340053F41B /* GoogleService-Info.plist in Resources */,
 				423C4F9C2812E1FB00C237D6 /* RecordTableViewCell.xib in Resources */,
 				422D3CBF27F1791B0001EC0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28E2677A9F04660DE37D241F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Racing game/Pods-Racing game-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Racing game/Pods-Racing game-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Racing game/Pods-Racing game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		426E2DFF28327EC80053F41B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		CF49C25CBA55AF9CAC02B056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Racing game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		422D3CB027F1791B0001EC0F /* Sources */ = {
@@ -332,11 +428,13 @@
 		};
 		422D3CC927F1791E0001EC0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA4DF08F5FA49AE42A1B82C9 /* Pods-Racing game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = GLTR4U994Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Racing game/Info.plist";
@@ -360,11 +458,13 @@
 		};
 		422D3CCA27F1791E0001EC0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0401F0043E47A2A0338C304A /* Pods-Racing game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = GLTR4U994Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Racing game/Info.plist";
@@ -408,6 +508,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		426E2DFE282FC21E0053F41B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 422D3CAC27F1791B0001EC0F /* Project object */;
 }

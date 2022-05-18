@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class GameViewController: UIViewController {
  
@@ -65,6 +67,19 @@ class GameViewController: UIViewController {
                 timer.invalidate()
                 self.gameOverScreen()
             }
+            
+            let userInfo = [
+              NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+              NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+              NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+              "ProductID": "NO ID",
+              "View": "MainView"
+            ]
+
+            let error = NSError.init(domain: NSCocoaErrorDomain,
+                                     code: -1002,
+                                     userInfo: userInfo)
+            Crashlytics.crashlytics().record(error: error)
         }
     }
                   
@@ -150,6 +165,19 @@ class GameViewController: UIViewController {
         }, completion: {[weak self] _ in
             self?.repeatAnimation()
         })
+        
+        let userInfo = [
+          NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+          NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+          NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Something wrong", comment: ""),
+          "ProductID": "NO ID",
+          "View": "MainView"
+        ]
+
+        let error = NSError.init(domain: NSCocoaErrorDomain,
+                                 code: -1003,
+                                 userInfo: userInfo)
+        Crashlytics.crashlytics().record(error: error)
     }
 
     func repeatAnimation() {
